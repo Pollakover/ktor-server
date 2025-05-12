@@ -1,15 +1,14 @@
-package com.example.register
+package com.example.features.login
 
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class RegisterReceiveRemote(
+data class LoginReceiveRemote(
     val login: String,
-    val email: String,
     val password: String
 )
 
 @Serializable
-data class RegisterResponseRemote(
+data class LoginResponseRemote(
     val token: String
 )

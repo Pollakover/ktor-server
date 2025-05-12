@@ -1,6 +1,6 @@
 package com.example.cache
 
-import com.example.register.RegisterReceiveRemote
+import com.example.features.register.RegisterReceiveRemote
 
 data class TokenCache(
     val login: String,

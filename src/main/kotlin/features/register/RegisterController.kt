@@ -1,4 +1,4 @@
-package com.example.register
+package com.example.features.register
 
 import com.example.database.tokens.TokenDTO
 import com.example.database.tokens.Tokens

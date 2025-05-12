@@ -1,4 +1,4 @@
-package com.example.login
+package com.example.features.login
 
 import com.example.database.tokens.TokenDTO
 import com.example.database.tokens.Tokens

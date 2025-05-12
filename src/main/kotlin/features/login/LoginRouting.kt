@@ -1,4 +1,4 @@
-package com.example.login
+package com.example.features.login
 
 import io.ktor.server.application.*
 import io.ktor.server.routing.*

@@ -2,9 +2,8 @@ package com.example.utils
 
 import com.example.cache.InMemoryCache
 import com.example.cache.TokenCache
-import com.example.login.LoginResponseRemote
-import com.example.register.RegisterReceiveRemote
-import com.example.register.RegisterResponseRemote
+import com.example.features.register.RegisterReceiveRemote
+import com.example.features.register.RegisterResponseRemote
 import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.request.*
