@@ -53,4 +53,16 @@ object Products : Table("products") {
             emptyList()
         }
     }
+
+    fun fetchProductNamesBySupplier(supplierId: String): List<String> {
+        return try {
+            transaction {
+                Products.selectAll()
+                    .where { Products.supplier eq supplierId }
+                    .map { it[Products.name] }
+            }
+        } catch (e: Exception) {
+            emptyList()
+        }
+    }
 }

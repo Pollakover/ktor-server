@@ -1,8 +1,11 @@
 package com.example
 
 import com.example.features.login.configureLoginRouting
+import com.example.features.orders.configureOrdersRouting
 import com.example.features.products.configureProductsRouting
 import com.example.features.register.RegisterRouting
+import com.example.features.suppliers.configureSuppliersRouting
+import com.example.features.warehouses.configureWarehousesRouting
 import io.ktor.server.application.*
 import io.ktor.server.cio.*
 import io.ktor.server.engine.*
@@ -26,6 +29,9 @@ fun Application.module() {
     configureRouting()
     configureLoginRouting()
     configureProductsRouting()
+    configureSuppliersRouting()
+    configureWarehousesRouting()
+    configureOrdersRouting()
 
     RegisterRouting().apply {
         this@module.configureRegisterRouting()

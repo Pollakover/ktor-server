@@ -2,8 +2,6 @@ package com.example.features.products
 
 import com.example.database.products.ProductDTO
 import com.example.database.products.Products
-import com.example.database.users.UserDTO
-import com.example.database.users.Users
 import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.request.*
