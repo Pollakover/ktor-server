@@ -13,6 +13,7 @@ object Orders  : Table("orders") {
     val status = varchar("status", 25)
     val number = integer("number")
     val product = varchar("product", 50)
+    val price = double("price")
 
     fun insert(orderDTO: OrderDTO) {
         transaction {
@@ -23,6 +24,7 @@ object Orders  : Table("orders") {
                 it[status] = orderDTO.status
                 it[user_login] = orderDTO.user_login
                 it[product] = orderDTO.product
+                it[price] = orderDTO.price
             }
         }
     }
@@ -38,7 +40,8 @@ object Orders  : Table("orders") {
                         status = it[status],
                         user_login = it[user_login],
                         product = it[product],
-                        number = it[number]
+                        number = it[number],
+                        price = it[price]
                     )
                 }
             }

@@ -14,3 +14,8 @@ data class AddSupplierRequest(
     val type: String,
     val user_login: String,
 )
+
+@Serializable
+data class GetSupplierByIdRequest(
+    val supplierId: String
+)

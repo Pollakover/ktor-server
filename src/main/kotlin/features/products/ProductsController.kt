@@ -35,6 +35,7 @@ class ProductsController(private val call: ApplicationCall) {
                     supplier = request.supplier,
                     warehouse = request.warehouse,
                     image_data = request.image_data,
+                    amount = request.amount,
                 )
             )
             call.respond(HttpStatusCode.OK, "Product added")

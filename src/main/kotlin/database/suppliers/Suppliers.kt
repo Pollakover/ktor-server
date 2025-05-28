@@ -44,4 +44,22 @@ object Suppliers : Table("suppliers") {
             emptyList()
         }
     }
+
+    fun getSupplierById(supplierId: String): SupplierDTO? {
+        return try {
+            transaction {
+                Suppliers.selectAll().where { Suppliers.supplierId eq supplierId }.singleOrNull()?.let {
+                    SupplierDTO(
+                        supplierId = it[Suppliers.supplierId],
+                        name = it[name],
+                        phone_number = it[phone_number],
+                        type = it[type],
+                        user_login = it[user_login]
+                    )
+                }
+            }
+        } catch (e: Exception) {
+            null
+        }
+    }
 }

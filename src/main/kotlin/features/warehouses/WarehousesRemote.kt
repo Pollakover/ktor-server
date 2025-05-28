@@ -14,3 +14,8 @@ data class AddWarehouseRequest(
     val postal_address: String,
     val user_login: String
 )
+
+@Serializable
+data class GetWarehouseByIdRequest(
+    val warehouseId: String
+)

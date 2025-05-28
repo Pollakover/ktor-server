@@ -12,4 +12,5 @@ class ProductDTO(
     val supplier: String,
     val warehouse: String,
     val image_data: String?,
+    val amount: Int,
 )

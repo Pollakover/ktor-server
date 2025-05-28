@@ -33,7 +33,8 @@ class OrdersController(private val call: ApplicationCall) {
                     user_login = request.user_login,
                     status = request.status,
                     product = request.product,
-                    number = 0
+                    number = 0,
+                    price = request.price
                 )
             )
             call.respond(HttpStatusCode.OK, "Order added")

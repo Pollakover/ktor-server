@@ -10,4 +10,5 @@ class OrderDTO (
     val status: String,
     val number: Int,
     val product: String,
+    val price: Double
 )

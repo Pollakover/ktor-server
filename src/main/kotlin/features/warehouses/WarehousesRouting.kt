@@ -14,5 +14,10 @@ fun Application.configureWarehousesRouting() {
             val warehousesController = WarehousesController(call)
             warehousesController.addWarehouse()
         }
+
+        post("/warehouses/getById") {
+            val warehousesController = WarehousesController(call)
+            warehousesController.getWarehouseById()
+        }
     }
 }

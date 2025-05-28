@@ -1,6 +1,5 @@
 package com.example.database.warehouses
 
-
 import org.jetbrains.exposed.sql.Table
 import org.jetbrains.exposed.sql.insert
 import org.jetbrains.exposed.sql.selectAll
@@ -40,6 +39,24 @@ object Warehouses: Table("warehouses") {
             }
         } catch (e: Exception) {
             emptyList()
+        }
+    }
+
+    fun getWarehouseById(warehouseId: String): WarehouseDTO? {
+        return try {
+            transaction {
+                Warehouses.selectAll().where { Warehouses.warehouseId eq warehouseId }.singleOrNull()?.let {
+                    WarehouseDTO(
+                        warehouseId = it[Warehouses.warehouseId],
+                        name = it[name],
+                        address = it[address],
+                        postal_address = it[postal_address],
+                        user_login = it[user_login],
+                    )
+                }
+            }
+        } catch (e: Exception) {
+            null
         }
     }
 }

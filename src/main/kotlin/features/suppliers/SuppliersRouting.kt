@@ -14,5 +14,10 @@ fun Application.configureSuppliersRouting() {
             val suppliersController = SuppliersController(call)
             suppliersController.addSupplier()
         }
+
+        post("/suppliers/getById") {
+            val suppliersController = SuppliersController(call)
+            suppliersController.getSupplierById()
+        }
     }
 }

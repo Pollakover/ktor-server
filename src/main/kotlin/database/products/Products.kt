@@ -15,6 +15,7 @@ object Products : Table("products") {
     val supplier = varchar("supplier", 50)
     val warehouse = varchar("warehouse", 50)
     val image_data = varchar("image_data", 100)
+    val amount = integer("amount")
 
     fun insert(productDTO: ProductDTO) {
         transaction {
@@ -28,6 +29,7 @@ object Products : Table("products") {
                 it[supplier] = productDTO.supplier
                 it[warehouse] = productDTO.warehouse
                 it[image_data] = productDTO.image_data ?: ""
+                it[amount] = productDTO.amount
             }
         }
     }
@@ -45,7 +47,8 @@ object Products : Table("products") {
                         user_login = it[user_login],
                         supplier = it[supplier],
                         warehouse = it[warehouse],
-                        image_data = it[image_data]
+                        image_data = it[image_data],
+                        amount = it[amount],
                     )
                 }
             }

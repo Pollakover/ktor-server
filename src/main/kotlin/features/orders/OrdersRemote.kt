@@ -14,4 +14,5 @@ data class AddOrderRequest(
     val user_login: String,
     val status: String,
     val product: String,
+    val price: Double,
 )

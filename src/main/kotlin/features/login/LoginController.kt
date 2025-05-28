@@ -32,4 +32,23 @@ class LoginController(private val call:ApplicationCall) {
             }
         }
     }
+
+    suspend fun getUserByLogin() {
+        try {
+            val request = call.receive<GetUserByLoginRequest>()
+            val userDTO = Users.fetchUser(request.login)
+
+            if (userDTO != null) {
+                call.respond(HttpStatusCode.OK, mapOf(
+                    "login" to userDTO.login,
+                    "username" to userDTO.username,
+                    "email" to userDTO.email
+                ))
+            } else {
+                call.respond(HttpStatusCode.NotFound, "User not found")
+            }
+        } catch (e: Exception) {
+            call.respond(HttpStatusCode.BadRequest, mapOf("error" to (e.message ?: "Unknown error")))
+        }
+    }
 }

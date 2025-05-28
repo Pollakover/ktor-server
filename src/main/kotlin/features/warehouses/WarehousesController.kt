@@ -41,4 +41,18 @@ class WarehousesController(private val call: ApplicationCall) {
             call.respond(HttpStatusCode.BadRequest, mapOf("error" to (e.message ?: "Unknown error")))
         }
     }
+
+    suspend fun getWarehouseById() {
+        try {
+            val request = call.receive<GetWarehouseByIdRequest>()
+            val warehouse = Warehouses.getWarehouseById(request.warehouseId)
+            if (warehouse != null) {
+                call.respond(HttpStatusCode.OK, warehouse)
+            } else {
+                call.respond(HttpStatusCode.NotFound, "Warehouse not found")
+            }
+        } catch (e: Exception) {
+            call.respond(HttpStatusCode.BadRequest, mapOf("error" to (e.message ?: "Unknown error")))
+        }
+    }
 }

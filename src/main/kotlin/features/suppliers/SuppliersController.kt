@@ -42,4 +42,18 @@ class SuppliersController(private val call: ApplicationCall) {
         }
     }
 
+    suspend fun getSupplierById() {
+        try {
+            val request = call.receive<GetSupplierByIdRequest>()
+            val supplier = Suppliers.getSupplierById(request.supplierId)
+            if (supplier != null) {
+                call.respond(HttpStatusCode.OK, supplier)
+            } else {
+                call.respond(HttpStatusCode.NotFound, "Supplier not found")
+            }
+        } catch (e: Exception) {
+            call.respond(HttpStatusCode.BadRequest, mapOf("error" to (e.message ?: "Unknown error")))
+        }
+    }
 }
+
