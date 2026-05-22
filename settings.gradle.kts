@@ -1,1 +1,1 @@
-rootProject.name = "ktor-sample"
+rootProject.name = "models-3d-app-backend"

@@ -4,14 +4,16 @@ plugins {
     alias(libs.plugins.kotlin.plugin.serialization)
 }
 
-group = "com.example"
+group = "ru.models-app"
 version = "0.0.1"
 
 application {
-    mainClass = "com.example.ApplicationKt"
+    mainClass = "ru.models-app.ApplicationKt"
     val isDevelopment: Boolean = project.ext.has("development")
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
 }
+
+
 
 repositories {
     mavenCentral()
@@ -23,6 +25,10 @@ dependencies {
     implementation(libs.ktor.serialization.kotlinx.json)
     implementation(libs.ktor.server.cio)
     implementation(libs.logback.classic)
+    implementation("io.ktor:ktor-serialization-gson")
+    implementation("io.ktor:ktor-server-call-logging")
+    implementation("io.ktor:ktor-server-status-pages")
+    implementation("io.ktor:ktor-server-netty")
 
     implementation(libs.exposed.core)
     implementation(libs.exposed.jdbc)

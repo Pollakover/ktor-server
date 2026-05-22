@@ -19,6 +19,9 @@ class RegisterController(val call : ApplicationCall) {
         if(!registerReceiveRemote.email.isValidEmail()) {
             call.respond(HttpStatusCode.BadRequest, "Email is not vallid")
         }
+        if(registerReceiveRemote.login.length > 25) {
+            call.respond(HttpStatusCode.BadRequest, "Login is too long")
+        }
         val userDTO = Users.fetchUser(registerReceiveRemote.login)
         if(userDTO != null) {
             call.respond(HttpStatusCode.Conflict, "User already exists!")
@@ -30,7 +33,7 @@ class RegisterController(val call : ApplicationCall) {
                         login = registerReceiveRemote.login,
                         password = registerReceiveRemote.password,
                         email = registerReceiveRemote.email,
-                        username = ""
+                        //username = ""
                     )
                 )
             } catch (e: ExposedSQLException) {

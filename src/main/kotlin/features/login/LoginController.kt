@@ -41,7 +41,7 @@ class LoginController(private val call:ApplicationCall) {
             if (userDTO != null) {
                 call.respond(HttpStatusCode.OK, mapOf(
                     "login" to userDTO.login,
-                    "username" to userDTO.username,
+                    //"username" to userDTO.username,
                     "email" to userDTO.email
                 ))
             } else {

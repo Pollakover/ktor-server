@@ -9,7 +9,7 @@ object Users : Table("users") {
 
     val login = varchar("login", 25)
     val password = varchar("password", 25)
-    val username = varchar("username", 30)
+    //val username = varchar("username", 30)
     val email = varchar("email", 50)
 
     fun insert(userDTO: UserDTO) {
@@ -17,7 +17,6 @@ object Users : Table("users") {
             insert {
                 it[login] = userDTO.login
                 it[password] = userDTO.password
-                it[username] = userDTO.username
                 it[email] = userDTO.email ?: ""
             }
 
@@ -31,7 +30,7 @@ object Users : Table("users") {
                     UserDTO(
                         login = row[Users.login],
                         password = row[password],
-                        username = row[username],
+                        //username = row[username],
                         email = row[email]
                     )
                 }

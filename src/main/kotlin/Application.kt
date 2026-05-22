@@ -1,5 +1,6 @@
 package com.example
 
+import com.example.features.files.configureFilesRouting
 import com.example.features.login.configureLoginRouting
 import com.example.features.orders.configureOrdersRouting
 import com.example.features.products.configureProductsRouting
@@ -17,10 +18,10 @@ fun main() {
         "jdbc:postgresql://localhost:5432/app",
         "org.postgresql.Driver",
         "postgres",
-        "admin"
+        "1234"
     )
 
-    embeddedServer(CIO, port = 8080, host = "0.0.0.0", module = Application::module)
+    embeddedServer(CIO, port = 8080, host = "192.168.1.6",  module = Application::module)
         .start(wait = true)
 }
 
@@ -32,6 +33,7 @@ fun Application.module() {
     configureSuppliersRouting()
     configureWarehousesRouting()
     configureOrdersRouting()
+    configureFilesRouting()
 
     RegisterRouting().apply {
         this@module.configureRegisterRouting()

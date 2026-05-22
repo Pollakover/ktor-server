@@ -1,0 +1,171 @@
+No.     Time           Source                Destination           Protocol Length Info
+      5 0.439448       192.168.85.128        192.168.85.2          ICMP     74     Echo (ping) request  id=0x0001, seq=9/2304, ttl=128 (reply in 6)
+
+Frame 5: 74 bytes on wire (592 bits), 74 bytes captured (592 bits) on interface \Device\NPF_{734BFB2A-0867-4E85-9E93-59B9D9BB2046}, id 0
+Ethernet II, Src: VMware_ff:ba:5b (00:0c:29:ff:ba:5b), Dst: VMware_f8:55:ee (00:50:56:f8:55:ee)
+Internet Protocol Version 4, Src: 192.168.85.128, Dst: 192.168.85.2
+Internet Control Message Protocol
+    Type: 8 (Echo (ping) request)
+    Code: 0
+    Checksum: 0x4d52 [correct]
+    [Checksum Status: Good]
+    Identifier (BE): 1 (0x0001)
+    Identifier (LE): 256 (0x0100)
+    Sequence Number (BE): 9 (0x0009)
+    Sequence Number (LE): 2304 (0x0900)
+    [Response frame: 6]
+    Data (32 bytes)
+
+0000  61 62 63 64 65 66 67 68 69 6a 6b 6c 6d 6e 6f 70   abcdefghijklmnop
+0010  71 72 73 74 75 76 77 61 62 63 64 65 66 67 68 69   qrstuvwabcdefghi
+
+No.     Time           Source                Destination           Protocol Length Info
+      6 0.440506       192.168.85.2          192.168.85.128        ICMP     74     Echo (ping) reply    id=0x0001, seq=9/2304, ttl=128 (request in 5)
+
+Frame 6: 74 bytes on wire (592 bits), 74 bytes captured (592 bits) on interface \Device\NPF_{734BFB2A-0867-4E85-9E93-59B9D9BB2046}, id 0
+Ethernet II, Src: VMware_f8:55:ee (00:50:56:f8:55:ee), Dst: VMware_ff:ba:5b (00:0c:29:ff:ba:5b)
+Internet Protocol Version 4, Src: 192.168.85.2, Dst: 192.168.85.128
+Internet Control Message Protocol
+    Type: 0 (Echo (ping) reply)
+    Code: 0
+    Checksum: 0x5552 [correct]
+    [Checksum Status: Good]
+    Identifier (BE): 1 (0x0001)
+    Identifier (LE): 256 (0x0100)
+    Sequence Number (BE): 9 (0x0009)
+    Sequence Number (LE): 2304 (0x0900)
+    [Request frame: 5]
+    [Response time: 1.058 ms]
+    Data (32 bytes)
+
+0000  61 62 63 64 65 66 67 68 69 6a 6b 6c 6d 6e 6f 70   abcdefghijklmnop
+0010  71 72 73 74 75 76 77 61 62 63 64 65 66 67 68 69   qrstuvwabcdefghi
+
+No.     Time           Source                Destination           Protocol Length Info
+      7 1.454833       192.168.85.128        192.168.85.2          ICMP     74     Echo (ping) request  id=0x0001, seq=10/2560, ttl=128 (reply in 8)
+
+Frame 7: 74 bytes on wire (592 bits), 74 bytes captured (592 bits) on interface \Device\NPF_{734BFB2A-0867-4E85-9E93-59B9D9BB2046}, id 0
+Ethernet II, Src: VMware_ff:ba:5b (00:0c:29:ff:ba:5b), Dst: VMware_f8:55:ee (00:50:56:f8:55:ee)
+Internet Protocol Version 4, Src: 192.168.85.128, Dst: 192.168.85.2
+Internet Control Message Protocol
+    Type: 8 (Echo (ping) request)
+    Code: 0
+    Checksum: 0x4d51 [correct]
+    [Checksum Status: Good]
+    Identifier (BE): 1 (0x0001)
+    Identifier (LE): 256 (0x0100)
+    Sequence Number (BE): 10 (0x000a)
+    Sequence Number (LE): 2560 (0x0a00)
+    [Response frame: 8]
+    Data (32 bytes)
+
+0000  61 62 63 64 65 66 67 68 69 6a 6b 6c 6d 6e 6f 70   abcdefghijklmnop
+0010  71 72 73 74 75 76 77 61 62 63 64 65 66 67 68 69   qrstuvwabcdefghi
+
+No.     Time           Source                Destination           Protocol Length Info
+      8 1.455648       192.168.85.2          192.168.85.128        ICMP     74     Echo (ping) reply    id=0x0001, seq=10/2560, ttl=128 (request in 7)
+
+Frame 8: 74 bytes on wire (592 bits), 74 bytes captured (592 bits) on interface \Device\NPF_{734BFB2A-0867-4E85-9E93-59B9D9BB2046}, id 0
+Ethernet II, Src: VMware_f8:55:ee (00:50:56:f8:55:ee), Dst: VMware_ff:ba:5b (00:0c:29:ff:ba:5b)
+Internet Protocol Version 4, Src: 192.168.85.2, Dst: 192.168.85.128
+Internet Control Message Protocol
+    Type: 0 (Echo (ping) reply)
+    Code: 0
+    Checksum: 0x5551 [correct]
+    [Checksum Status: Good]
+    Identifier (BE): 1 (0x0001)
+    Identifier (LE): 256 (0x0100)
+    Sequence Number (BE): 10 (0x000a)
+    Sequence Number (LE): 2560 (0x0a00)
+    [Request frame: 7]
+    [Response time: 0.815 ms]
+    Data (32 bytes)
+
+0000  61 62 63 64 65 66 67 68 69 6a 6b 6c 6d 6e 6f 70   abcdefghijklmnop
+0010  71 72 73 74 75 76 77 61 62 63 64 65 66 67 68 69   qrstuvwabcdefghi
+
+No.     Time           Source                Destination           Protocol Length Info
+      9 2.473465       192.168.85.128        192.168.85.2          ICMP     74     Echo (ping) request  id=0x0001, seq=11/2816, ttl=128 (reply in 10)
+
+Frame 9: 74 bytes on wire (592 bits), 74 bytes captured (592 bits) on interface \Device\NPF_{734BFB2A-0867-4E85-9E93-59B9D9BB2046}, id 0
+Ethernet II, Src: VMware_ff:ba:5b (00:0c:29:ff:ba:5b), Dst: VMware_f8:55:ee (00:50:56:f8:55:ee)
+Internet Protocol Version 4, Src: 192.168.85.128, Dst: 192.168.85.2
+Internet Control Message Protocol
+    Type: 8 (Echo (ping) request)
+    Code: 0
+    Checksum: 0x4d50 [correct]
+    [Checksum Status: Good]
+    Identifier (BE): 1 (0x0001)
+    Identifier (LE): 256 (0x0100)
+    Sequence Number (BE): 11 (0x000b)
+    Sequence Number (LE): 2816 (0x0b00)
+    [Response frame: 10]
+    Data (32 bytes)
+
+0000  61 62 63 64 65 66 67 68 69 6a 6b 6c 6d 6e 6f 70   abcdefghijklmnop
+0010  71 72 73 74 75 76 77 61 62 63 64 65 66 67 68 69   qrstuvwabcdefghi
+
+No.     Time           Source                Destination           Protocol Length Info
+     10 2.474585       192.168.85.2          192.168.85.128        ICMP     74     Echo (ping) reply    id=0x0001, seq=11/2816, ttl=128 (request in 9)
+
+Frame 10: 74 bytes on wire (592 bits), 74 bytes captured (592 bits) on interface \Device\NPF_{734BFB2A-0867-4E85-9E93-59B9D9BB2046}, id 0
+Ethernet II, Src: VMware_f8:55:ee (00:50:56:f8:55:ee), Dst: VMware_ff:ba:5b (00:0c:29:ff:ba:5b)
+Internet Protocol Version 4, Src: 192.168.85.2, Dst: 192.168.85.128
+Internet Control Message Protocol
+    Type: 0 (Echo (ping) reply)
+    Code: 0
+    Checksum: 0x5550 [correct]
+    [Checksum Status: Good]
+    Identifier (BE): 1 (0x0001)
+    Identifier (LE): 256 (0x0100)
+    Sequence Number (BE): 11 (0x000b)
+    Sequence Number (LE): 2816 (0x0b00)
+    [Request frame: 9]
+    [Response time: 1.120 ms]
+    Data (32 bytes)
+
+0000  61 62 63 64 65 66 67 68 69 6a 6b 6c 6d 6e 6f 70   abcdefghijklmnop
+0010  71 72 73 74 75 76 77 61 62 63 64 65 66 67 68 69   qrstuvwabcdefghi
+
+No.     Time           Source                Destination           Protocol Length Info
+     11 3.482656       192.168.85.128        192.168.85.2          ICMP     74     Echo (ping) request  id=0x0001, seq=12/3072, ttl=128 (reply in 12)
+
+Frame 11: 74 bytes on wire (592 bits), 74 bytes captured (592 bits) on interface \Device\NPF_{734BFB2A-0867-4E85-9E93-59B9D9BB2046}, id 0
+Ethernet II, Src: VMware_ff:ba:5b (00:0c:29:ff:ba:5b), Dst: VMware_f8:55:ee (00:50:56:f8:55:ee)
+Internet Protocol Version 4, Src: 192.168.85.128, Dst: 192.168.85.2
+Internet Control Message Protocol
+    Type: 8 (Echo (ping) request)
+    Code: 0
+    Checksum: 0x4d4f [correct]
+    [Checksum Status: Good]
+    Identifier (BE): 1 (0x0001)
+    Identifier (LE): 256 (0x0100)
+    Sequence Number (BE): 12 (0x000c)
+    Sequence Number (LE): 3072 (0x0c00)
+    [Response frame: 12]
+    Data (32 bytes)
+
+0000  61 62 63 64 65 66 67 68 69 6a 6b 6c 6d 6e 6f 70   abcdefghijklmnop
+0010  71 72 73 74 75 76 77 61 62 63 64 65 66 67 68 69   qrstuvwabcdefghi
+
+No.     Time           Source                Destination           Protocol Length Info
+     12 3.483658       192.168.85.2          192.168.85.128        ICMP     74     Echo (ping) reply    id=0x0001, seq=12/3072, ttl=128 (request in 11)
+
+Frame 12: 74 bytes on wire (592 bits), 74 bytes captured (592 bits) on interface \Device\NPF_{734BFB2A-0867-4E85-9E93-59B9D9BB2046}, id 0
+Ethernet II, Src: VMware_f8:55:ee (00:50:56:f8:55:ee), Dst: VMware_ff:ba:5b (00:0c:29:ff:ba:5b)
+Internet Protocol Version 4, Src: 192.168.85.2, Dst: 192.168.85.128
+Internet Control Message Protocol
+    Type: 0 (Echo (ping) reply)
+    Code: 0
+    Checksum: 0x554f [correct]
+    [Checksum Status: Good]
+    Identifier (BE): 1 (0x0001)
+    Identifier (LE): 256 (0x0100)
+    Sequence Number (BE): 12 (0x000c)
+    Sequence Number (LE): 3072 (0x0c00)
+    [Request frame: 11]
+    [Response time: 1.002 ms]
+    Data (32 bytes)
+
+0000  61 62 63 64 65 66 67 68 69 6a 6b 6c 6d 6e 6f 70   abcdefghijklmnop
+0010  71 72 73 74 75 76 77 61 62 63 64 65 66 67 68 69   qrstuvwabcdefghi
