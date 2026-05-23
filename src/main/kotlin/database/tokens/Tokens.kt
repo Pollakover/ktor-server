@@ -1,8 +1,8 @@
 package com.example.database.tokens
 
-import org.jetbrains.exposed.sql.Table
-import org.jetbrains.exposed.sql.insert
-import org.jetbrains.exposed.sql.transactions.transaction
+import org.jetbrains.exposed.v1.core.Table
+import org.jetbrains.exposed.v1.jdbc.transactions.transaction
+import org.jetbrains.exposed.v1.jdbc.insert
 
 object Tokens : Table("tokens") {
     private val login = Tokens.varchar("login",25)

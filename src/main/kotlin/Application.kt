@@ -10,7 +10,7 @@ import com.example.features.warehouses.configureWarehousesRouting
 import io.ktor.server.application.*
 import io.ktor.server.cio.*
 import io.ktor.server.engine.*
-import org.jetbrains.exposed.sql.Database
+import org.jetbrains.exposed.v1.jdbc.Database
 
 
 fun main() {
@@ -21,7 +21,7 @@ fun main() {
         "1234"
     )
 
-    embeddedServer(CIO, port = 8080, host = "192.168.1.6",  module = Application::module)
+    embeddedServer(CIO, port = 8080, host = "10.220.43.227",  module = Application::module)
         .start(wait = true)
 }
 

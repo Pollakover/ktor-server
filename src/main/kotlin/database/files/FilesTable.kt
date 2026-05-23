@@ -1,7 +1,6 @@
 package com.example.database.files
 
-import org.jetbrains.exposed.dao.id.IntIdTable
-import org.jetbrains.exposed.sql.Table
+import org.jetbrains.exposed.v1.core.Table
 
 object FilesTable : Table("files") {
 

@@ -2,7 +2,6 @@ package com.example.features.files
 
 import com.example.database.files.FilesTable
 import com.example.database.files.UploadResponse
-import com.example.features.login.LoginController
 import io.ktor.http.content.PartData
 import io.ktor.http.content.forEachPart
 import io.ktor.http.content.streamProvider
@@ -11,8 +10,8 @@ import io.ktor.server.http.content.staticFiles
 import io.ktor.server.request.receiveMultipart
 import io.ktor.server.response.respond
 import io.ktor.server.routing.*
-import org.jetbrains.exposed.sql.insert
-import org.jetbrains.exposed.sql.transactions.transaction
+import org.jetbrains.exposed.v1.jdbc.insert
+import org.jetbrains.exposed.v1.jdbc.transactions.transaction
 import java.io.File
 
 fun Application.configureFilesRouting() {

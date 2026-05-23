@@ -32,7 +32,7 @@ dependencies {
 
     implementation(libs.exposed.core)
     implementation(libs.exposed.jdbc)
-    implementation("org.postgresql:postgresql:42.7.5")
+    implementation("org.postgresql:postgresql:42.7.7")
     implementation("com.h2database:h2:2.3.232")
 
     testImplementation(libs.ktor.server.test.host)
