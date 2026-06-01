@@ -1,7 +1,8 @@
 package com.example
 
-import com.example.features.files.configureFilesRouting
+import com.example.features.categories.configureCategoriesRouting
 import com.example.features.login.configureLoginRouting
+import com.example.features.models.configureModelsRouting
 import com.example.features.orders.configureOrdersRouting
 import com.example.features.products.configureProductsRouting
 import com.example.features.register.RegisterRouting
@@ -33,7 +34,8 @@ fun Application.module() {
     configureSuppliersRouting()
     configureWarehousesRouting()
     configureOrdersRouting()
-    configureFilesRouting()
+    configureModelsRouting()
+    configureCategoriesRouting()
 
     RegisterRouting().apply {
         this@module.configureRegisterRouting()

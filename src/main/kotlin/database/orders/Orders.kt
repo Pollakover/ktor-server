@@ -6,7 +6,7 @@ import org.jetbrains.exposed.v1.jdbc.transactions.transaction
 import org.jetbrains.exposed.v1.jdbc.insert
 import org.jetbrains.exposed.v1.jdbc.selectAll
 
-object Orders  : Table("orders") {
+object Orders : Table("orders") {
     val orderId = varchar("id", 50)
     val amount = integer("amount")
     val delivery_date = varchar("delivery_date", 10)

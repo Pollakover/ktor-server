@@ -4,12 +4,24 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 class ModelDTO (
-    val modelId: Int,
-    val amount: Int,
-    val delivery_date: String,
+    val id: Int,
+    val name: String,
+    val description: String,
+    val width: Double,
+    val height: Double,
+    val length: Double,
+    val size: Double,
+    val file_url: String,
+    val image_url: String,
     val user_login: String,
-    val status: String,
-    val number: Int,
-    val product: String,
-    val price: Double
+)
+@Serializable
+data class DeleteModelResponse(
+    val success: Boolean,
+    val id: Int,
+    val message: String? = null
+)
+@Serializable
+data class UpdateModelResponse(
+    val model: ModelDTO
 )
